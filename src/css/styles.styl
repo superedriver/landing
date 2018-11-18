@@ -1,0 +1,188 @@
+$color-white = #ffffff
+$color-green = #2ecc71
+
+content-center()
+  margin 0 auto
+  width 1178px
+
+//@font-face
+//  font-family Roboto-Bold
+//  src url(../fonts/Roboto-Bold.ttf)
+//
+//@font-face
+//  font-family Roboto-Medium
+//  src url(../fonts/Roboto-Medium.ttf)
+//
+//@font-face
+//  font-family Roboto-Light
+//  src url(../fonts/Roboto-Light.ttf)
+
+@font-face
+  font-family Roboto
+  src url(../fonts/Roboto.ttf)
+
+body
+  color $color-white
+  font-family Roboto, sans-serif
+  width 1600px
+
+a,
+a:visited,
+a:active
+  color $color-white
+  text-decoration none
+
+.-green
+  color $color-green
+
+.header
+  position: relative;
+  height: 1000px;
+  overflow: hidden;
+
+  .header-background
+    position absolute
+
+  .header-content
+    padding-top 98px
+    position relative
+    z-index 3
+    height 1000px
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+    .header-content-title
+      border-bottom 2px solid $color-white
+      border-top 2px solid $color-white
+      box-sizing border-box
+      font-size 59px
+      font-weight bold
+      margin-bottom 50px
+      height 86px
+      padding-top 6px
+      text-align-last justify
+      width 751px
+      vertical-align middle
+
+    .header-content-action
+      background transparent
+      border 2px solid $color-white
+      color $color-white
+      cursor pointer
+      display inline-block
+      font-size 16px
+      font-weight bold
+      height 56px
+      padding-top 5px
+      vertical-align middle
+      width 185px
+
+.slider-controls
+  left: 1379px;
+  position: absolute;
+  top: 889px;
+  z-index: 3;
+
+.slide-list
+  .slide-item
+    position absolute
+    opacity 0
+    transition opacity 1s
+    z-index 1
+
+    &.current
+      opacity 1
+      z-index 2
+
+.toggle-list
+  align-self flex-end
+  display flex
+  flex-direction column
+  height 50px
+  justify-content space-between
+
+  .toggle-item
+    border 2px solid $color-white
+    border-radius 50%
+    cursor pointer
+    height 6px
+    width 6px
+
+    &.current
+      background-color $color-white
+
+.toolbar
+  align-items center
+  background-color #252e30
+  display flex
+  height 70px
+
+.toolbar-content
+  content-center()
+  align-items center
+  display flex
+  justify-content space-between
+
+  .logo
+    align-items center
+    display flex
+    font-size 30px
+    font-weight bold
+
+  .logo-avatar
+    align-items center
+    background-color #4b5456
+    display flex
+    justify-content center
+    height 42px
+    margin-right 17px
+    text-align center
+    width 42px
+
+  .nav-list
+    display flex
+    font-size 16px
+    justify-content space-between
+    width 770px
+
+    .nav-item
+      font-weight bold
+
+      &:hover
+        color $color-green
+
+#goals
+  content-center()
+  display flex
+  justify-content space-between
+
+  .goal-item
+    margin-bottom 90px
+    margin-top 92px
+    width 365px
+
+  .goal-item-name
+    color #566366
+    font-size 30px
+    font-weight bold
+    padding-bottom 34px
+
+  .goal-item-description
+    font-size 18px
+    color #919191
+    line-height 1.7
+    //font-family Roboto-Medium sans-serif
+
+#about-me
+  display: flex;
+
+  .photo
+    width 865px
+    height 755px
+    overflow hidden
+
+  .about-me
+    background-color  #f2f2f1
+    color #919191

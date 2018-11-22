@@ -5,6 +5,10 @@ content-center()
   margin 0 auto
   width 1178px
 
+description()
+  font-size 18px
+  color #919191
+  line-height 1.7
 //@font-face
 //  font-family Roboto-Bold
 //  src url(../fonts/Roboto-Bold.ttf)
@@ -34,6 +38,16 @@ a:active
 
 .-green
   color $color-green
+
+.h2, .h3
+  color #566366
+  font-weight bold
+
+.h2
+  font-size 30px
+
+.h3
+  font-size 22px
 
 .header
   position: relative;
@@ -83,7 +97,7 @@ a:active
   left: 1379px;
   position: absolute;
   top: 889px;
-  z-index: 3;
+  z-index: 4;
 
 .slide-list
   .slide-item
@@ -161,28 +175,74 @@ a:active
   .goal-item
     margin-bottom 90px
     margin-top 92px
-    width 365px
+    width 357px
 
   .goal-item-name
-    color #566366
-    font-size 30px
-    font-weight bold
     padding-bottom 34px
 
   .goal-item-description
-    font-size 18px
-    color #919191
-    line-height 1.7
-    //font-family Roboto-Medium sans-serif
+    description()
 
 #about-me
+  background-color  #f2f2f1
   display: flex;
 
   .photo
-    width 865px
     height 755px
+    margin-right 100px
     overflow hidden
+    width 610px
 
   .about-me
-    background-color  #f2f2f1
     color #919191
+    padding-top 94px
+    width: 680px
+
+  .about-me-title {
+    margin-bottom 36px
+  }
+
+  .title-head
+    padding-bottom 35px
+
+  .title-item
+    description()
+    padding-bottom 29px
+
+  .about-me-content
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+
+    .content-item
+      flex-shrink 0
+      margin-bottom 45px
+      width 317px
+      display flex
+
+    .content-item-icon
+      flex-shrink 0
+      width 40px
+
+    .description-item
+      description()
+
+    .content-item-icon
+      background-position 0 2px
+      background-repeat no-repeat
+      margin-right 28px
+
+    .web-design
+      background-image url("../img/about-me-icons/web-design.png")
+
+    .graphic-design
+      background-image url("../img/about-me-icons/graphic-design.png")
+
+    .online-marketing
+      background-image url("../img/about-me-icons/online-marketing.png")
+
+    .seo
+      background-image url("../img/about-me-icons/seo.png")
+
+    .description-title
+      margin-bottom 15px

@@ -16,6 +16,17 @@ a:active {
 .-green {
   color: #2ecc71;
 }
+.h2,
+.h3 {
+  color: #566366;
+  font-weight: bold;
+}
+.h2 {
+  font-size: 30px;
+}
+.h3 {
+  font-size: 22px;
+}
 .header {
   position: relative;
   height: 1000px;
@@ -64,7 +75,7 @@ a:active {
   left: 1379px;
   position: absolute;
   top: 889px;
-  z-index: 3;
+  z-index: 4;
 }
 .slide-list .slide-item {
   position: absolute;
@@ -143,12 +154,9 @@ a:active {
 #goals .goal-item {
   margin-bottom: 90px;
   margin-top: 92px;
-  width: 365px;
+  width: 357px;
 }
 #goals .goal-item-name {
-  color: #566366;
-  font-size: 30px;
-  font-weight: bold;
   padding-bottom: 34px;
 }
 #goals .goal-item-description {
@@ -157,14 +165,69 @@ a:active {
   line-height: 1.7;
 }
 #about-me {
+  background-color: #f2f2f1;
   display: flex;
 }
 #about-me .photo {
-  width: 865px;
   height: 755px;
+  margin-right: 100px;
   overflow: hidden;
+  width: 610px;
 }
 #about-me .about-me {
-  background-color: #f2f2f1;
   color: #919191;
+  padding-top: 94px;
+  width: 680px;
+}
+#about-me .about-me-title {
+  margin-bottom: 36px;
+}
+#about-me .title-head {
+  padding-bottom: 35px;
+}
+#about-me .title-item {
+  font-size: 18px;
+  color: #919191;
+  line-height: 1.7;
+  padding-bottom: 29px;
+}
+#about-me .about-me-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#about-me .about-me-content .content-item {
+  flex-shrink: 0;
+  margin-bottom: 45px;
+  width: 317px;
+  display: flex;
+}
+#about-me .about-me-content .content-item-icon {
+  flex-shrink: 0;
+  width: 40px;
+}
+#about-me .about-me-content .description-item {
+  font-size: 18px;
+  color: #919191;
+  line-height: 1.7;
+}
+#about-me .about-me-content .content-item-icon {
+  background-repeat: no-repeat;
+  margin-right: 28px;
+  background-position: 0 2px;
+}
+#about-me .about-me-content .web-design {
+  background-image: url("../img/about-me-icons/web-design.png");
+}
+#about-me .about-me-content .graphic-design {
+  background-image: url("../img/about-me-icons/graphic-design.png");
+}
+#about-me .about-me-content .online-marketing {
+  background-image: url("../img/about-me-icons/online-marketing.png");
+}
+#about-me .about-me-content .seo {
+  background-image: url("../img/about-me-icons/seo.png");
+}
+#about-me .about-me-content .description-title {
+  margin-bottom: 15px;
 }

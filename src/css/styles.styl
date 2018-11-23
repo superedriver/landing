@@ -9,6 +9,7 @@ description()
   font-size 18px
   color #919191
   line-height 1.7
+  padding-bottom 29px
 //@font-face
 //  font-family Roboto-Bold
 //  src url(../fonts/Roboto-Bold.ttf)
@@ -39,15 +40,31 @@ a:active
 .-green
   color $color-green
 
+.button
+  background transparent
+  border 2px solid $color-green
+  color $color-green
+  cursor pointer
+  display inline-block
+  font-size 16px
+  font-weight bold
+  height 56px
+  padding-top 5px
+  vertical-align middle
+  padding-left: 37px;
+  padding-right: 37px;
+
 .h2, .h3
   color #566366
   font-weight bold
 
 .h2
   font-size 30px
+  margin-bottom 35px
 
 .h3
   font-size 22px
+  margin-bottom 15px
 
 .header
   position: relative;
@@ -81,17 +98,8 @@ a:active
       vertical-align middle
 
     .header-content-action
-      background transparent
-      border 2px solid $color-white
+      border-color $color-white
       color $color-white
-      cursor pointer
-      display inline-block
-      font-size 16px
-      font-weight bold
-      height 56px
-      padding-top 5px
-      vertical-align middle
-      width 185px
 
 .slider-controls
   left: 1379px;
@@ -173,12 +181,9 @@ a:active
   justify-content space-between
 
   .goal-item
-    margin-bottom 90px
+    margin-bottom 60px
     margin-top 92px
     width 357px
-
-  .goal-item-name
-    padding-bottom 34px
 
   .goal-item-description
     description()
@@ -198,16 +203,11 @@ a:active
     padding-top 94px
     width: 680px
 
-  .about-me-title {
+  .about-me-title
     margin-bottom 36px
-  }
-
-  .title-head
-    padding-bottom 35px
 
   .title-item
     description()
-    padding-bottom 29px
 
   .about-me-content
     display flex
@@ -216,7 +216,7 @@ a:active
 
     .content-item
       flex-shrink 0
-      margin-bottom 45px
+      margin-bottom 16px
       width 317px
       display flex
 
@@ -244,5 +244,53 @@ a:active
     .seo
       background-image url("../img/about-me-icons/seo.png")
 
-    .description-title
-      margin-bottom 15px
+#skills
+  padding-left 210px
+  padding-top 91px
+  padding-bottom 66px
+  display flex
+
+  .skills-description
+    width 550px
+    margin-right 89px
+
+    .description-item
+      description()
+
+    .contact-me
+      margin-top 11px
+
+  .skills-graphs
+    margin-top 40px
+
+  .skills-graphs-item
+    margin-bottom: 34px;
+
+  .skill-diagram-container
+    width 560px
+    height 30px
+    background-color: #f2f2f1
+
+  .skill-diagram-progress
+    height 30px
+    color $color-white
+    background-color $color-green
+    display flex
+    align-items center
+    justify-content flex-end
+    padding-right 10px
+    box-sizing border-box
+    font-size 17px
+    font-weight bold
+
+    &.photoshop
+      width: 519px
+
+    &.illustrator
+      width: 476px
+
+    &.html-css
+      width: 519px
+
+    &.php-mysql
+      width: 358px

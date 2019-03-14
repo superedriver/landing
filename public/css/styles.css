@@ -5,7 +5,7 @@
 body {
   color: #fff;
   font-family: Roboto, sans-serif;
-  width: 1600px;
+  min-width: 1200px;
 }
 a,
 a:visited,
@@ -42,6 +42,17 @@ a:active {
 .h3 {
   font-size: 22px;
   margin-bottom: 15px;
+}
+.description-item {
+  font-size: 18px;
+  color: #919191;
+  line-height: 1.7;
+  padding-bottom: 29px;
+}
+.centered-content {
+  width: 100%;
+  max-width: 1178px;
+  margin: 0 auto;
 }
 .header {
   position: relative;
@@ -118,8 +129,6 @@ a:active {
   height: 70px;
 }
 .toolbar-content {
-  margin: 0 auto;
-  width: 1178px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -153,8 +162,6 @@ a:active {
   color: #2ecc71;
 }
 #goals {
-  margin: 0 auto;
-  width: 1178px;
   display: flex;
   justify-content: space-between;
 }
@@ -162,12 +169,6 @@ a:active {
   margin-bottom: 60px;
   margin-top: 92px;
   width: 357px;
-}
-#goals .goal-item-description {
-  font-size: 18px;
-  color: #919191;
-  line-height: 1.7;
-  padding-bottom: 29px;
 }
 #about-me {
   background-color: #f2f2f1;
@@ -187,12 +188,6 @@ a:active {
 #about-me .about-me-title {
   margin-bottom: 36px;
 }
-#about-me .title-item {
-  font-size: 18px;
-  color: #919191;
-  line-height: 1.7;
-  padding-bottom: 29px;
-}
 #about-me .about-me-content {
   display: flex;
   flex-wrap: wrap;
@@ -207,12 +202,6 @@ a:active {
 #about-me .about-me-content .content-item-icon {
   flex-shrink: 0;
   width: 40px;
-}
-#about-me .about-me-content .description-item {
-  font-size: 18px;
-  color: #919191;
-  line-height: 1.7;
-  padding-bottom: 29px;
 }
 #about-me .about-me-content .content-item-icon {
   background-position: 0 2px;
@@ -241,12 +230,6 @@ a:active {
   width: 550px;
   margin-right: 89px;
 }
-#skills .skills-description .description-item {
-  font-size: 18px;
-  color: #919191;
-  line-height: 1.7;
-  padding-bottom: 29px;
-}
 #skills .skills-description .contact-me {
   margin-top: 11px;
 }
@@ -257,9 +240,9 @@ a:active {
   margin-bottom: 34px;
 }
 #skills .skill-diagram-container {
+  background-color: #f2f2f1;
   width: 560px;
   height: 30px;
-  background-color: #f2f2f1;
 }
 #skills .skill-diagram-progress {
   height: 30px;
@@ -284,4 +267,28 @@ a:active {
 }
 #skills .skill-diagram-progress.php-mysql {
   width: 358px;
+}
+#resume {
+  background-color: #f2f2f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  position: relative;
+}
+#resume:after {
+  content: '';
+  position: absolute;
+  border: 30px solid transparent;
+  border-top: 20px solid #f2f2f1;
+  bottom: -49px;
+}
+#resume .information {
+  max-width: 1025px;
+  text-align: center;
+}
+#resume .download-resume {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }

@@ -8,17 +8,14 @@ html(lang='en')
     link(href='./css/styles.css', rel='stylesheet', type='text/css')
     title Focal
   body.body
-    header.header
+    header.header#home
       .header-background
         .slider
           .slider-content
             ul.slide-list
-              li.slide-item.current
-                img(src='./img/slides/slide0.png', alt='slide 0')
-              li.slide-item
-                img(src='./img/slides/slide1.png', alt='slide 1')
-              li.slide-item
-                img(src='./img/slides/slide2.png', alt='slide 2')
+              each slide in [0, 1, 2]
+                li.slide-item(class= slide === 0 ? 'current' : '')
+                  img(src=`./img/slides/slide${slide}.png`, alt='slide ${slide}')
           .slider-controls
             .toggle-list
               .toggle-item.current
@@ -28,38 +25,43 @@ html(lang='en')
         h1.header-content-title WEB & GRAPHIC DESIGNER
         button.button.header-content-action LEARN MORE
     .toolbar
-      .toolbar-content
+      .toolbar-content.centered-content
         .toolbar-left.logo
           span.logo-avatar F
           span.logo-text
             | FO
             span.-green CAL
         nav.toolbar-right.nav-list
-          a.nav-item(href='#home') HOME
-          a.nav-item(href='#about-me') ABOUT ME
-          a.nav-item(href='#skills') SKILLS
-          a.nav-item(href='#resume') RESUME
-          a.nav-item(href='#testimonials') TESTIMONIALS
-          a.nav-item(href='#portfolio') PORTFOLIO
-          a.nav-item(href='#contact-me') CONTACT ME
-    section#goals.section-block
+          each navItem in ['home', 'about-me', 'skills', 'resume', 'testimonials', 'portfolio', 'contact-me']
+            a.nav-item(href=`#${navItem}`) #{navItem.replace('-', ' ').toUpperCase()}
+    section#goals.section-block.centered-content
       .goal-item
         h2.h2.goal-item-name VALUES
-        p.goal-item-description Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est.
+        p.description-item
+         | Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute
+         | disputando cu est.
       .goal-item
         h2.h2.goal-item-name GOALS
-        p.goal-item-description Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est.
+        p.description-item
+          | Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute
+          | disputando cu est.
       .goal-item
         h2.h2.goal-item-name HOBBIES
-        p.goal-item-description Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est.
+        p.description-item
+          | Lorem ipsum dolor sit amet, ea doming until epicuri iudicabit nam, te usu virtute placerat. Purto brute
+          | disputando cu est.
     section#about-me.section-block
       .photo
         img(src='./img/person1.png', alt='photo')
       .about-me
         .about-me-title
           h2.h2.title-head ABOUT ME
-          p.title-item Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
-          p.title-item Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est, eam dicam soluta ei.
+          p.description-item
+            | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute
+            | disputando cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
+          p.description-item
+            | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute
+            | disputando cu est, eam dicam soluta ei.
         .about-me-content
           .content-item
             .content-item-icon.web-design
@@ -84,8 +86,12 @@ html(lang='en')
     section#skills.section-block
       .skills-description
         h2.h2 MY SKILLS
-        p.description-item Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
-        p.description-item Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando cu est.
+        p.description-item
+          | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+          | cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
+        p.description-item
+          | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+          | cu est.
         button.button.contact-me CONTACT ME
       .skills-graphs
         .skills-graphs-item
@@ -106,6 +112,12 @@ html(lang='en')
             .skill-diagram-progress.php-mysql 70%
 
     section#resume.section-block
+      h2.h2 RESUME
+      p.information.description-item
+        | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+        | cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
+      button.button.download-resume DOWNLOAD RESUME
+
     section#education.section-block
     section#experience.section-block
     section#testimonials.section-block

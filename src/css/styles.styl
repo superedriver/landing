@@ -1,26 +1,9 @@
 $color-white = #ffffff
 $color-green = #2ecc71
+$background-gray = #f2f2f1
 
-content-center()
-  margin 0 auto
-  width 1178px
-
-description()
-  font-size 18px
-  color #919191
-  line-height 1.7
-  padding-bottom 29px
-//@font-face
-//  font-family Roboto-Bold
-//  src url(../fonts/Roboto-Bold.ttf)
-//
-//@font-face
-//  font-family Roboto-Medium
-//  src url(../fonts/Roboto-Medium.ttf)
-//
-//@font-face
-//  font-family Roboto-Light
-//  src url(../fonts/Roboto-Light.ttf)
+gray-background()
+  background-color $background-gray
 
 @font-face
   font-family Roboto
@@ -29,7 +12,7 @@ description()
 body
   color $color-white
   font-family Roboto, sans-serif
-  width 1600px
+  min-width 1200px
 
 a,
 a:visited,
@@ -65,6 +48,17 @@ a:active
 .h3
   font-size 22px
   margin-bottom 15px
+
+.description-item
+  font-size 18px
+  color #919191
+  line-height 1.7
+  padding-bottom 29px
+
+.centered-content
+  width 100%
+  max-width 1178px
+  margin 0 auto
 
 .header
   position: relative;
@@ -142,7 +136,6 @@ a:active
   height 70px
 
 .toolbar-content
-  content-center()
   align-items center
   display flex
   justify-content space-between
@@ -176,7 +169,6 @@ a:active
         color $color-green
 
 #goals
-  content-center()
   display flex
   justify-content space-between
 
@@ -185,11 +177,8 @@ a:active
     margin-top 92px
     width 357px
 
-  .goal-item-description
-    description()
-
 #about-me
-  background-color  #f2f2f1
+  gray-background()
   display: flex;
 
   .photo
@@ -206,9 +195,6 @@ a:active
   .about-me-title
     margin-bottom 36px
 
-  .title-item
-    description()
-
   .about-me-content
     display flex
     flex-wrap wrap
@@ -223,9 +209,6 @@ a:active
     .content-item-icon
       flex-shrink 0
       width 40px
-
-    .description-item
-      description()
 
     .content-item-icon
       background-position 0 2px
@@ -254,9 +237,6 @@ a:active
     width 550px
     margin-right 89px
 
-    .description-item
-      description()
-
     .contact-me
       margin-top 11px
 
@@ -267,9 +247,9 @@ a:active
     margin-bottom: 34px;
 
   .skill-diagram-container
+    gray-background()
     width 560px
     height 30px
-    background-color: #f2f2f1
 
   .skill-diagram-progress
     height 30px
@@ -294,3 +274,28 @@ a:active
 
     &.php-mysql
       width: 358px
+
+#resume
+  gray-background()
+  display flex
+  flex-direction column
+  align-items center
+  padding-top 95px
+  padding-bottom 95px
+  position relative
+
+  &:after {
+    content ''
+    position absolute
+    border 30px solid transparent
+    border-top 20px solid $background-gray
+    bottom -49px
+  }
+
+  .information
+    max-width 1025px
+    text-align center
+
+  .download-resume
+    margin-top 10px
+    margin-bottom 5px

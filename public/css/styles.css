@@ -227,7 +227,7 @@ a:active {
 }
 #skills .skills-description {
   width: 550px;
-  margin-right: 89px;
+  margin-right: 75px;
 }
 #skills .skills-description .contact-me {
   margin-top: 11px;
@@ -290,4 +290,7 @@ a:active {
 #resume .download-resume {
   margin-top: 10px;
   margin-bottom: 5px;
+}
+#testimonials {
+  padding-top: 95px;
 }

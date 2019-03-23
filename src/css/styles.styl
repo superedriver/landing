@@ -10,7 +10,7 @@ gray-background()
   src url(../fonts/Roboto.ttf)
 
 body
-  color $color-white
+  color #919191
   font-family Roboto, sans-serif
   min-width 1200px
 
@@ -22,6 +22,9 @@ a:active
 
 .-green
   color $color-green
+
+.-text-bold
+  font-weight bold
 
 .button
   background transparent
@@ -51,7 +54,6 @@ a:active
 
 .description-item
   font-size 18px
-  color #919191
   line-height 1.7
   padding-bottom 29px
 
@@ -61,6 +63,7 @@ a:active
   margin 0 auto
 
 .header
+  color $color-white
   position: relative;
   height: 1000px;
   overflow: hidden;
@@ -132,6 +135,7 @@ a:active
 .toolbar
   align-items center
   background-color #252e30
+  color $color-white
   display flex
   height 70px
 
@@ -188,7 +192,6 @@ a:active
     width 610px
 
   .about-me
-    color #919191
     padding-top 94px
     width: 680px
 
@@ -300,4 +303,38 @@ a:active
     margin-bottom 5px
 
 #testimonials
-  padding-top 95px
+  .testimonial-item
+    border-bottom 1px solid #CCCCCC
+    padding-bottom 27px
+    padding-top 95px
+
+    &:last-child
+      border none
+
+  .testimonial-content
+    display flex
+    justify-content space-between
+
+  .testimonial
+    width 555px
+
+  .testimonial-content-description
+    width 565px
+
+  .testimonial-title
+    font-size 18px
+
+  .testimonial-level
+    background-color $color-green
+    color $color-white
+    display inline-block
+
+  .testimonial-description
+    border-top 1px solid #CCCCCC
+    padding-top 22px
+    padding-bottom 63px
+
+  .testimonial-level
+    margin-top 14px
+    padding 5px 10px
+    margin-bottom 30px

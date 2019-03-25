@@ -10,7 +10,7 @@ html(lang='en')
   body.body
     header.header#home
       .header-background
-        .slider
+        .header-slider
           .slider-content
             ul.slide-list
               each slide in [0, 1, 2]
@@ -187,6 +187,37 @@ html(lang='en')
                 | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute
                 | disputando cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei.
     section#quotes.section-block
+      .quotes-slider
+        .slider-content.quotes-slider-content
+          ul.slide-list
+            li.slide-item.quotes-slider-item.current
+              .slider-item-quote
+                | “Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+                | cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri. Lorem ipsum dolor sit amet,
+                | ea doming epicuri iudicabit nam.”
+              .slider-item-author.-text-bold JOHN STONE
+            li.slide-item.quotes-slider-item
+              .slider-item-quote
+                | “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nulla sit amet nibh aliquet ullamcorper.
+                | Vestibulum tincidunt, magna vel hendrerit laoreet, dui dui aliquam dui, nec semper ipsum augue ac tellus."
+              .slider-item-author.-text-bold LEE RITENOUR
+            li.slide-item.quotes-slider-item
+              .slider-item-quote
+                | “Aliquam finibus, enim at facilisis tempor, justo neque egestas nisi, eu varius magna tortor ut erat.
+                | Cras consequat turpis ante, eu consequat ipsum rutrum vitae. Cras fermentum ac turpis non mattis."
+              .slider-item-author.-text-bold PAT METHENY
+            li.slide-item.quotes-slider-item
+              .slider-item-quote
+                | “Curabitur a egestas ligula, a elementum urna. Proin venenatis, ante vitae eleifend efficitur, libero
+                | risus imperdiet ligula, nec rhoncus dolor velit at velit. Mauris vel lorem at tortor cursus faucibus
+                | eget vitae est. Fusce ornare a orci gravida fermentum.”
+              .slider-item-author.-text-bold VITALY KLICHKO
+        .slider-controls
+          .toggle-list
+            .toggle-item.current
+            .toggle-item
+            .toggle-item
+            .toggle-item
     section#portfolio.section-block
     section#contact-me.section-block
     footer

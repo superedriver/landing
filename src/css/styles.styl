@@ -1,6 +1,7 @@
 $color-white = #ffffff
 $color-green = #2ecc71
 $background-gray = #f2f2f1
+$quote-width = 1070px
 
 gray-background()
   background-color $background-gray
@@ -62,6 +63,20 @@ a:active
   max-width 1178px
   margin 0 auto
 
+.toggle-list
+  display flex
+  justify-content space-between
+
+  .toggle-item
+    border 2px solid $color-white
+    border-radius 50%
+    cursor pointer
+    height 6px
+    width 6px
+
+    &.current
+      background-color $color-white
+
 .header
   color $color-white
   position: relative;
@@ -98,11 +113,21 @@ a:active
       border-color $color-white
       color $color-white
 
-.slider-controls
-  left: 1379px;
-  position: absolute;
-  top: 889px;
-  z-index: 4;
+  .slider-controls
+    left: 1379px;
+    position: absolute;
+    top: 889px;
+    z-index: 4;
+
+  .toggle-list
+    align-self flex-end
+    flex-direction column
+
+  .toggle-item
+    margin-bottom 10px
+
+    &:last-child
+      margin-bottom 0
 
 .slide-list
   .slide-item
@@ -114,23 +139,6 @@ a:active
     &.current
       opacity 1
       z-index 2
-
-.toggle-list
-  align-self flex-end
-  display flex
-  flex-direction column
-  height 50px
-  justify-content space-between
-
-  .toggle-item
-    border 2px solid $color-white
-    border-radius 50%
-    cursor pointer
-    height 6px
-    width 6px
-
-    &.current
-      background-color $color-white
 
 .toolbar
   align-items center
@@ -193,7 +201,7 @@ a:active
 
   .about-me
     padding-top 94px
-    width: 680px
+    width 680px
 
   .about-me-title
     margin-bottom 36px
@@ -338,3 +346,51 @@ a:active
     margin-top 14px
     padding 5px 10px
     margin-bottom 30px
+
+#quotes
+  gray-background()
+  padding-bottom 100px
+  display flex
+  align-items center
+  flex-direction column
+  padding-top 255px
+  position relative
+
+  .quotes-slider
+    display flex
+    flex-direction column
+    align-items center
+
+  .quotes-slider-item
+    display flex
+    flex-direction column
+    align-items center
+    top 90px
+    width $quote-width
+    left: 'calc(50% - %s)' % ($quote-width/2)
+
+  .slider-item-quote
+    text-align center
+    min-height 146px
+    font-size 24px
+    line-height 1.5
+    font-style italic
+
+  .quotes-slider-content
+    margin-bottom 46px
+
+  .slider-item-author
+    font-size 18px
+
+  .toggle-list
+    flex-direction row
+
+    .toggle-item
+      margin-right 10px
+      border 2px solid $color-green
+
+      &.current
+        background-color $color-green
+
+      &:last-child
+        margin-right 0

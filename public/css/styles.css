@@ -56,6 +56,20 @@ a:active {
   max-width: 1178px;
   margin: 0 auto;
 }
+.toggle-list {
+  display: flex;
+  justify-content: space-between;
+}
+.toggle-list .toggle-item {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 6px;
+  width: 6px;
+}
+.toggle-list .toggle-item.current {
+  background-color: #fff;
+}
 .header {
   color: #fff;
   position: relative;
@@ -92,11 +106,21 @@ a:active {
   border-color: #fff;
   color: #fff;
 }
-.slider-controls {
+.header .slider-controls {
   left: 1379px;
   position: absolute;
   top: 889px;
   z-index: 4;
+}
+.header .toggle-list {
+  align-self: flex-end;
+  flex-direction: column;
+}
+.header .toggle-item {
+  margin-bottom: 10px;
+}
+.header .toggle-item:last-child {
+  margin-bottom: 0;
 }
 .slide-list .slide-item {
   position: absolute;
@@ -107,23 +131,6 @@ a:active {
 .slide-list .slide-item.current {
   opacity: 1;
   z-index: 2;
-}
-.toggle-list {
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  height: 50px;
-  justify-content: space-between;
-}
-.toggle-list .toggle-item {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 6px;
-  width: 6px;
-}
-.toggle-list .toggle-item.current {
-  background-color: #fff;
 }
 .toolbar {
   align-items: center;
@@ -329,4 +336,52 @@ a:active {
   margin-top: 14px;
   padding: 5px 10px;
   margin-bottom: 30px;
+}
+#quotes {
+  background-color: #f2f2f1;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 255px;
+  position: relative;
+}
+#quotes .quotes-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#quotes .quotes-slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 90px;
+  width: 1070px;
+  left: calc(50% - 535px);
+}
+#quotes .slider-item-quote {
+  text-align: center;
+  min-height: 146px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-style: italic;
+}
+#quotes .quotes-slider-content {
+  margin-bottom: 46px;
+}
+#quotes .slider-item-author {
+  font-size: 18px;
+}
+#quotes .toggle-list {
+  flex-direction: row;
+}
+#quotes .toggle-list .toggle-item {
+  margin-right: 10px;
+  border: 2px solid #2ecc71;
+}
+#quotes .toggle-list .toggle-item.current {
+  background-color: #2ecc71;
+}
+#quotes .toggle-list .toggle-item:last-child {
+  margin-right: 0;
 }

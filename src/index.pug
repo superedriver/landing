@@ -6,6 +6,7 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     link(href='./css/cssreset-min.css', rel='stylesheet', type='text/css')
     link(href='./css/styles.css', rel='stylesheet', type='text/css')
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
     title Focal
   body.body
     header.header#home
@@ -110,7 +111,6 @@ html(lang='en')
           h3.h3 PHP / MYSQL
           .skill-diagram-container
             .skill-diagram-progress.php-mysql 70%
-
     section#resume.section-block
       h2.h2 RESUME
       p.information.description-item
@@ -218,7 +218,17 @@ html(lang='en')
             .toggle-item
             .toggle-item
             .toggle-item
-    section#portfolio.section-block
+    section#portfolio.section-block.centered-content
+      h2.h2 PORTFOLIO
+      p.information.description-item
+        | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+        | cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.
+      .portfolio-grid
+        each item in ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+          .portfolio-item
+            img.portfolio-item-image(src=`./img/portfolio/${item}.png`, alt=`portfolio-item-${item}`)
+            a.portfolio-item-link(href='#')
+              i.portfolio-item-icon.fas.fa-search
     section#contact-me.section-block
     footer
     script(src='./js/slider.js')

@@ -77,6 +77,10 @@ a:active
     &.current
       background-color $color-white
 
+.information
+  max-width 1025px
+  text-align center
+
 .header
   color $color-white
   position: relative;
@@ -302,10 +306,6 @@ a:active
     bottom -49px
   }
 
-  .information
-    max-width 1025px
-    text-align center
-
   .download-resume
     margin-top 10px
     margin-bottom 5px
@@ -394,3 +394,46 @@ a:active
 
       &:last-child
         margin-right 0
+
+#portfolio
+  display flex
+  flex-direction column
+  align-items center
+  padding-top 95px
+  margin-bottom 60px
+
+  .portfolio-grid
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    margin-top 60px
+
+  .portfolio-item
+    display block
+    height 300px
+    width 360px
+    margin-bottom 40px
+    position relative
+
+    &:hover .portfolio-item-link
+      display block
+
+  .portfolio-item-link
+    display none
+    position absolute
+    top 0
+    left 0
+    background rgba(46,204,113,0.75)
+    height 300px
+    width 360px
+
+  .portfolio-item-icon
+    position absolute
+    top 130px
+    left 152px
+    font-size 50px
+
+#contact-me
+  background-color: #000
+  height 20px
+

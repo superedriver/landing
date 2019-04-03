@@ -230,5 +230,35 @@ html(lang='en')
             a.portfolio-item-link(href='#')
               i.portfolio-item-icon.fas.fa-search
     section#contact-me.section-block
-    footer
+      .centered-content
+        h2.h2.contact-me-header CONTACT ME
+        .contact-me-content
+          .contact-information
+            .contact-description
+              | Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam, te usu virtute placerat. Purto brute disputando
+              | cu est, eam dicam soluta ei. Vel dicam vivendo accusata ei.
+            .contact-address
+              | 122 33rd Street East
+              br
+              | Saskatoon, SK
+              br
+              | S7K 1R9
+            .contact-email-phone
+              .email-phone-item
+                span.email-phone-item-desc Email:
+                | info@focal.com
+              .email-phone-item
+                span.email-phone-item-desc  Phone:
+                | 1-306-222-2323
+          form.contact-form
+            label.contact-form-label(for='name') Name*
+            input.contact-form-field(type="text" name='name' id='name' placeholder='Enter name')
+            label.contact-form-label(for='email') Email*
+            input.contact-form-field(type="text" name='email' id='email' placeholder='Enter email')
+            label.contact-form-label(for='message') Message*
+            textarea.contact-form-field.message-field(name='message' id='message')
+            div
+              input.button.contact-form-button(type="submit" value="CONTACT ME")
+
+    footer.footer
     script(src='./js/slider.js')

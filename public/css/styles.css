@@ -313,7 +313,7 @@ a:active {
   display: flex;
   justify-content: space-between;
 }
-#testimonials .testimonial {
+#testimonials .testimonials {
   width: 555px;
 }
 #testimonials .testimonial-content-description {
@@ -424,6 +424,58 @@ a:active {
   font-size: 50px;
 }
 #contact-me {
-  background-color: #000;
-  height: 20px;
+  background-color: #252e30;
+  color: #fff;
+  padding-top: 95px;
+  padding-bottom: 100px;
+}
+#contact-me .contact-me-header {
+  color: #fff;
+  margin-bottom: 0;
+}
+#contact-me .contact-me-content {
+  display: flex;
+  justify-content: space-between;
+  color: #7a7c7c;
+  font-size: 18px;
+  line-height: 1.7;
+}
+#contact-me .contact-me-content .contact-information {
+  width: 550px;
+  margin-top: 35px;
+}
+#contact-me .contact-description,
+#contact-me .contact-address {
+  margin-bottom: 25px;
+}
+#contact-me .email-phone-item {
+  display: flex;
+  justify-content: space-between;
+  width: 223px;
+}
+#contact-me .email-phone-item .email-phone-item-desc {
+  color: #fff;
+}
+#contact-me .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+}
+#contact-me .contact-form .contact-form-label {
+  color: #fff;
+  margin-bottom: 13px;
+}
+#contact-me .contact-form .contact-form-field {
+  box-sizing: border-box;
+  height: 55px;
+  margin-bottom: 30px;
+}
+#contact-me .contact-form .contact-form-field.message-field {
+  height: 280px;
+}
+#contact-me .contact-form-button {
+  background: #000;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
 }

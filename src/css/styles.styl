@@ -1,6 +1,9 @@
 $color-white = #ffffff
 $color-green = #2ecc71
 $background-gray = #f2f2f1
+$background-dark = #252e30
+$background-black = #000
+$text-dark = #7a7c7c
 $quote-width = 1070px
 
 gray-background()
@@ -323,7 +326,7 @@ a:active
     display flex
     justify-content space-between
 
-  .testimonial
+  .testimonials
     width 555px
 
   .testimonial-content-description
@@ -434,6 +437,57 @@ a:active
     font-size 50px
 
 #contact-me
-  background-color: #000
-  height 20px
+  background-color $background-dark
+  color $color-white
+  padding-top 95px
+  padding-bottom 100px
 
+  .contact-me-header
+    color $color-white
+    margin-bottom: 0;
+
+  .contact-me-content
+    display flex
+    justify-content space-between
+    color $text-dark
+    font-size 18px
+    line-height 1.7
+
+    .contact-information
+      width 550px
+      margin-top 35px
+
+  .contact-description,
+  .contact-address
+    margin-bottom 25px
+
+  .email-phone-item
+    display flex
+    justify-content space-between
+    width 223px
+
+    .email-phone-item-desc
+      color $color-white
+
+  .contact-form
+    display flex
+    flex-direction column
+    width 540px
+
+    .contact-form-label
+      color $color-white
+      margin-bottom 13px
+
+    .contact-form-field
+      box-sizing border-box
+      height 55px
+      margin-bottom 30px
+
+      &.message-field
+        height 280px
+
+  .contact-form-button
+    background $background-black
+    border none
+    color $color-white
+    margin-top 10px

@@ -1,8 +1,10 @@
 $color-white = #ffffff
 $color-green = #2ecc71
+$color-gray = #919191
 $background-gray = #f2f2f1
 $background-dark = #252e30
-$background-black = #000
+$background-dark-gray = #4b5456
+$background-black = #191f21
 $text-dark = #7a7c7c
 $quote-width = 1070px
 
@@ -14,7 +16,7 @@ gray-background()
   src url(../fonts/Roboto.ttf)
 
 body
-  color #919191
+  color $color-gray
   font-family Roboto, sans-serif
   min-width 1200px
 
@@ -167,7 +169,7 @@ a:active
 
   .logo-avatar
     align-items center
-    background-color #4b5456
+    background-color $background-dark-gray
     display flex
     justify-content center
     height 42px
@@ -491,3 +493,44 @@ a:active
     border none
     color $color-white
     margin-top 10px
+
+.footer
+  display flex
+  flex-direction column
+  align-items: center;
+  background $background-black
+  padding-top 46px
+  padding-bottom 50px
+
+  .footer-description
+    font-size 14px
+    margin-bottom 28px
+
+  .footer-icons
+    display flex
+    justify-content space-between
+    width 255px
+
+  .footer-icon-wrapper
+    background $background-dark-gray
+    border-radius 50%
+    width 34px
+    height 34px
+    position relative
+    cursor pointer
+    color $color-gray
+
+    &:hover .footer-icon
+      color $color-white
+
+  .footer-icon
+    font-size 17px
+    position absolute
+    top 9px
+    left 9px
+
+    &.footer-icon-facebook-f
+      left 12px
+
+    &.footer-icon-google-plus-g
+      left 7px

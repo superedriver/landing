@@ -259,6 +259,10 @@ html(lang='en')
             textarea.contact-form-field.message-field(name='message' id='message')
             div
               input.button.contact-form-button(type="submit" value="CONTACT ME")
-
     footer.footer
+      .footer-description COPYRIGHT 2019 FOCAL - BUILT WITH PASSION
+      .footer-icons
+        each icon in ['twitter', 'facebook-f', 'pinterest', 'google-plus-g', 'dribbble', 'linkedin-in']
+          a.footer-icon-wrapper(href='#')
+            i(class=`footer-icon fab fa-${icon} footer-icon-${icon}`)
     script(src='./js/slider.js')
